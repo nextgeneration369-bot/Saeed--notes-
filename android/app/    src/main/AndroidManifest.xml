@@ -1,4 +1,4 @@
-<manifest package="com.saeed.notes"
+<manifest package="com.saeed.notesapp"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <application
         android:label="Saeed Notes"
