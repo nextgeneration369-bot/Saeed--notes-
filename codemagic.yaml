@@ -6,10 +6,14 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-      java: 17  # <- ADD THIS LINE
+      java: 17
     scripts:
       - name: Get Flutter packages
         script: flutter pub get
+      - name: DELETE OLD ANDROID AND RECREATE WITH V2
+        script: |
+          rm -rf android
+          flutter create .
       - name: Build Android APK
         script: flutter build apk --release
     artifacts:
