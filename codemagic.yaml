@@ -9,6 +9,10 @@ workflows:
     scripts:
       - name: Get Flutter packages
         script: flutter pub get
+      - name: Add iOS Platform
+        script: |
+          flutter create --platforms=ios .
+          cd ios && pod install
       - name: Build iOS
         script: flutter build ipa --release --no-codesign
     artifacts:
