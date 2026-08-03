@@ -1,19 +1,10 @@
-workflows:
-  saeed-notes-ios:
-    name: Saeed Notes iOS Build
-    max_build_duration: 120
-    environment:
-      flutter: stable
-      xcode: latest
-      cocoapods: default
-    scripts:
-      - name: Get Flutter packages
-        script: flutter pub get
-      - name: Create iOS files
-        script: flutter create --platforms=ios .
-      - name: Install Pods
-        script: cd ios && pod install --repo-update
-      - name: Build iOS
-        script: flutter build ipa --release --no-codesign
-    artifacts:
-      - build/ios/ipa/*.ipa
+    workflows:
+      saeed-notes-ios:
+        name: Saeed Notes iOS Build
+        environment:
+          flutter: stable
+        scripts:
+          - script: flutter pub get
+          - script: flutter build ipa --release --no-codesign
+        artifacts:
+          - build/ios/ipa/*.ipa
