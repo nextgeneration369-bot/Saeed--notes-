@@ -15,7 +15,7 @@ android {
     }
 
     defaultConfig {
-            applicationId "com.saeed.notesapp"
+            applicationId "com.saeed.notesapp"  
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
