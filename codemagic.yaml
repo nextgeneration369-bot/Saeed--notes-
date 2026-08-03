@@ -1,20 +1,15 @@
 workflows:
-  saeed-notes:
-    name: Saeed Notes Build
+  saeed-notes-ios:
+    name: Saeed Notes iOS Build
     max_build_duration: 120
     environment:
       flutter: stable
       xcode: latest
       cocoapods: default
-      java: 17
     scripts:
       - name: Get Flutter packages
         script: flutter pub get
-      - name: DELETE OLD ANDROID AND RECREATE WITH V2
-        script: |
-          rm -rf android
-          flutter create .
-      - name: Build Android APK
-        script: flutter build apk --release
+      - name: Build iOS
+        script: flutter build ipa --release --no-codesign
     artifacts:
-      - build/app/outputs/flutter-apk/app-release.apk
+      - build/ios/ipa/*.ipa
