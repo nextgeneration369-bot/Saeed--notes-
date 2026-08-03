@@ -1,5 +1,4 @@
-<manifest package="com.saeed.notesapp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="com.nextgeneration369.saeednotes">
     <application
         android:label="Saeed Notes"
         android:name="${applicationName}"
@@ -26,4 +25,3 @@
             android:value="2" />
     </application>
 </manifest>
-             
